@@ -1,0 +1,28 @@
+.aspect {
+  display: flex;
+}
+
+.aspect-conteiner-icon {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--teem-background);
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+}
+
+.aspect > .item {
+  width: 270px;
+}
+.aspect .item + .item {
+  margin-left: 30px;
+}
+.quality {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section-title.top {
+  margin-bottom: 10px;
+}
