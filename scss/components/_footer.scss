@@ -1,25 +1,14 @@
-.footer > .conteiner {
-  display: flex;
-}
-
-.footer-contact-conteiner {
-  margin-right: 70px;
-}
-
-.footer-social-title {
-  margin-bottom: 20px;
-  color: var(--main-white-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
 .footer {
   background-color: var(--secondary-background);
   padding-top: 60px;
   padding-bottom: 60px;
+  .conteiner {
+    display: flex;
+  }
+}
+
+.footer-contact-conteiner {
+  margin-right: 70px;
 }
 
 .address {
@@ -32,43 +21,53 @@
   font-style: normal;
 }
 
-.footer-contact > .mail-tell {
+.footer-contacts__item {
   margin-bottom: 9px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.footer-contact > .mail-tell:last-child {
-  margin-bottom: 0;
-}
-
-.footer-contact .contact {
+.footer-contacts__contact {
   color: var(--rgba);
 
   font-size: 14px;
   line-height: 1.7;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.footer-contact .contact:hover,
-.footer-contact .contact:focus {
-  color: var(--accent-color);
+.footer-social__title {
+  margin-bottom: 20px;
+  color: var(--main-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.social-list-footer {
+.social-footer {
   display: flex;
+  &__icon {
+    fill: var(--main-white-color);
+  }
 }
 
-.social-item-footer {
+.social-footer__item {
   width: 44px;
   height: 44px;
   margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.social-item-footer:last-child {
-  margin-right: 0;
-}
-
-.aspect-link-footer {
+.social-footer__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,13 +76,8 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.aspect-link-footer:hover,
-.aspect-link-footer:focus {
-  background-color: var(--accent-color);
-}
-
-.aspect-icon-footer {
-  fill: var(--main-white-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }

@@ -1,8 +1,31 @@
-.photo-about > .item {
-  position: relative;
+.about {
+  padding-bottom: 94px;
 }
 
-.description-photo {
+.about__title {
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.photo-about {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-about__item {
+  position: relative;
+  & + & {
+    margin-left: 30px;
+  }
+}
+
+.photo-about__description {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -16,38 +39,6 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.section-title {
-  color: var(--title-text-color);
-  margin-bottom: 50px;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-}
-
-.about {
-  padding-bottom: 94px;
-}
-
-.photo-about {
-  display: flex;
-  justify-content: center;
-}
-
-.photo-about .item + .item {
-  margin-left: 30px;
-}
-
-.section-title.photo {
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
 }

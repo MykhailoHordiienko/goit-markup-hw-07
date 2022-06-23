@@ -1,65 +1,76 @@
-.section.teem {
+.teem {
   background-color: var(--teem-background);
 
   padding-top: 94px;
   padding-bottom: 94px;
+
+  &__title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
 }
 
 .members-photo {
   display: flex;
   justify-content: center;
+
+  &__conteiner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__name {
+    color: var(--title-text-color);
+    text-align: center;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+  }
+  &__job {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.18;
+  }
 }
 
-.item.border-photo {
+.members-photo__item {
   border: 1px;
   background: var(--main-white-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  & + & {
+    margin-left: 30px;
+  }
 }
 
-.members-photo .item + .item {
-  margin-left: 30px;
-}
-
-.work-name {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.name-title {
-  color: var(--title-text-color);
-  text-align: center;
-  margin-bottom: 10px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-}
-
-.work-title {
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.18;
+.members-photo__social-list {
+  margin-top: 16px;
 }
 
 .social-list {
-  margin-top: 16px;
   display: flex;
   justify-content: center;
 }
 
-.social-item {
+.social-list__item {
   width: 44px;
   height: 44px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
-.social-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.aspect-link {
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,19 +78,16 @@
   width: 100%;
   height: 100%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
+    background-color: var(--accent-color);
+    fill: var(--main-white-color);
+  }
 }
 
-.aspect-icon {
+.social-list__icon {
   fill: var(--icon-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.aspect-link:hover,
-.aspect-link:focus {
-  background-color: var(--accent-color);
-}
-
-.aspect-link:hover .aspect-icon,
-.aspect-link:focus .aspect-icon {
-  fill: var(--main-white-color);
 }
